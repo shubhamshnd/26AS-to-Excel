@@ -26,13 +26,8 @@ The application will start, and your default web browser will open a new tab poi
 
 Enjoy converting your 26AS text files to Excel with ease!
 
-To run the application, you'll need a few Python packages, most notably `streamlit`, `pandas`, and `xlsxwriter`. Create a `requirements.txt` file with the following contents to manage these dependencies:
 
-streamlit==1.8.0
-pandas==1.3.4
-xlsxwriter==1.4.3
 
-These versions are just examples; you might want to use the latest versions of these packages or adjust them based on compatibility and testing. Users will install these dependencies using the command provided in the README instructions.
 
-This setup provides users with everything they need to run your Streamlit application locally, offering a straightforward guide from installation to usage.
+
 
