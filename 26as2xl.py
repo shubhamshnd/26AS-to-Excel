@@ -4,8 +4,12 @@ from io import BytesIO
 import xlsxwriter
 
 def parse_26as_text_file(file_content):
-    lines = file_content.split("\n")
+    normalized_content = file_content.replace('^', '\t')
+    lines = normalized_content.split("\n")
     data = []  # List to hold all rows for the dataframe
+
+    # Detect delimiter by checking the first non-empty line
+
     current_deductor_name = ""  # Variable to hold the deductor's name
     current_deductor_tan = ""  # Variable to hold the deductor's TAN
     
@@ -57,6 +61,10 @@ def parse_26as_text_file(file_content):
     df = pd.DataFrame(data, columns=columns)
     
     return df
+
+
+
+
 
 def to_excel(df):
     output = BytesIO()
